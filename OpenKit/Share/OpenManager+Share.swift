@@ -36,6 +36,12 @@ public extension OpenManager {
         handle(isSuccess, message)
       })
       
+    case .sinaWeibo:
+      
+      SinaWeiboManager.share(with: item.prepareForSinaWeibo(), handle: { (isSuccess, message) in
+      
+        handle(isSuccess, message)
+      })
     }
     
   }

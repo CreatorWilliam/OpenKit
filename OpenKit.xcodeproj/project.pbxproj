@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		BB2A760E20526A7A00C95014 /* OpenPayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A760D20526A7A00C95014 /* OpenPayItem.swift */; };
+		BB2A76252052856700C95014 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2A76212052856600C95014 /* libWeiboSDK.a */; };
+		BB2A76262052856700C95014 /* WBHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB2A76222052856600C95014 /* WBHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB2A76272052856700C95014 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB2A76232052856600C95014 /* WeiboSDK.bundle */; };
+		BB2A76282052856700C95014 /* WeiboSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = BB2A76242052856700C95014 /* WeiboSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB2A762A205285CA00C95014 /* SinaWeiboManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A7629205285CA00C95014 /* SinaWeiboManager.swift */; };
+		BB2A762C205285D700C95014 /* SinaWeiboUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A762B205285D700C95014 /* SinaWeiboUserItem.swift */; };
+		BB2A762E205285E300C95014 /* SinaWeiboShareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A762D205285E300C95014 /* SinaWeiboShareItem.swift */; };
+		BB2A7630205286DB00C95014 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2A762F205286DB00C95014 /* QuartzCore.framework */; };
+		BB2A7632205286E500C95014 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2A7631205286E500C95014 /* ImageIO.framework */; };
+		BB2A7634205286F300C95014 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2A7633205286F300C95014 /* CoreText.framework */; };
+		BB2A76362052870700C95014 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2A76352052870700C95014 /* CoreGraphics.framework */; };
+		BB2A76382052873400C95014 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2A76372052873400C95014 /* Photos.framework */; };
 		BBFCD8E22052309F00978E44 /* OpenKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BBFCD8E02052309F00978E44 /* OpenKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBFCD8EE2052313200978E44 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8EA2052313100978E44 /* libWeChatSDK.a */; };
 		BBFCD8EF2052313200978E44 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = BBFCD8EB2052313100978E44 /* WXApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +46,18 @@
 
 /* Begin PBXFileReference section */
 		BB2A760D20526A7A00C95014 /* OpenPayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPayItem.swift; sourceTree = "<group>"; };
+		BB2A76212052856600C95014 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		BB2A76222052856600C95014 /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
+		BB2A76232052856600C95014 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		BB2A76242052856700C95014 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		BB2A7629205285CA00C95014 /* SinaWeiboManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinaWeiboManager.swift; sourceTree = "<group>"; };
+		BB2A762B205285D700C95014 /* SinaWeiboUserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinaWeiboUserItem.swift; sourceTree = "<group>"; };
+		BB2A762D205285E300C95014 /* SinaWeiboShareItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinaWeiboShareItem.swift; sourceTree = "<group>"; };
+		BB2A762F205286DB00C95014 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BB2A7631205286E500C95014 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		BB2A7633205286F300C95014 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		BB2A76352052870700C95014 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BB2A76372052873400C95014 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		BBFCD8DD2052309F00978E44 /* OpenKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFCD8E02052309F00978E44 /* OpenKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenKit.h; sourceTree = "<group>"; };
 		BBFCD8E12052309F00978E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,20 +89,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2A76382052873400C95014 /* Photos.framework in Frameworks */,
+				BB2A76252052856700C95014 /* libWeiboSDK.a in Frameworks */,
+				BBFCD8EE2052313200978E44 /* libWeChatSDK.a in Frameworks */,
 				BBFCD900205231E800978E44 /* libz.tbd in Frameworks */,
 				BBFCD8FE205231D900978E44 /* libsqlite3.0.tbd in Frameworks */,
 				BBFCD8FC205231CF00978E44 /* libc++.tbd in Frameworks */,
+				BB2A7632205286E500C95014 /* ImageIO.framework in Frameworks */,
+				BB2A7630205286DB00C95014 /* QuartzCore.framework in Frameworks */,
+				BB2A7634205286F300C95014 /* CoreText.framework in Frameworks */,
+				BB2A76362052870700C95014 /* CoreGraphics.framework in Frameworks */,
 				BBFCD8FA205231BE00978E44 /* Security.framework in Frameworks */,
 				BBFCD8F8205231B100978E44 /* CFNetwork.framework in Frameworks */,
 				BBFCD8F6205231A800978E44 /* CoreTelephony.framework in Frameworks */,
 				BBFCD8F42052319D00978E44 /* SystemConfiguration.framework in Frameworks */,
-				BBFCD8EE2052313200978E44 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB2A761F205284B800C95014 /* SinaWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				BB2A7629205285CA00C95014 /* SinaWeiboManager.swift */,
+				BB2A762D205285E300C95014 /* SinaWeiboShareItem.swift */,
+				BB2A762B205285D700C95014 /* SinaWeiboUserItem.swift */,
+				BB2A7620205284CA00C95014 /* SDK */,
+			);
+			path = SinaWeibo;
+			sourceTree = "<group>";
+		};
+		BB2A7620205284CA00C95014 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				BB2A76242052856700C95014 /* WeiboSDK.h */,
+				BB2A76222052856600C95014 /* WBHttpRequest.h */,
+				BB2A76212052856600C95014 /* libWeiboSDK.a */,
+				BB2A76232052856600C95014 /* WeiboSDK.bundle */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
 		BBFCD8D32052309F00978E44 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +157,7 @@
 				BBFCD92C205237A200978E44 /* Share */,
 				BBFCD92E205237B500978E44 /* Pay */,
 				BBFCD8E82052310D00978E44 /* WeChat */,
+				BB2A761F205284B800C95014 /* SinaWeibo */,
 				BBFCD8E12052309F00978E44 /* Info.plist */,
 			);
 			path = OpenKit;
@@ -136,6 +189,11 @@
 		BBFCD8F22052319D00978E44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB2A76372052873400C95014 /* Photos.framework */,
+				BB2A76352052870700C95014 /* CoreGraphics.framework */,
+				BB2A7633205286F300C95014 /* CoreText.framework */,
+				BB2A7631205286E500C95014 /* ImageIO.framework */,
+				BB2A762F205286DB00C95014 /* QuartzCore.framework */,
 				BBFCD8FF205231E800978E44 /* libz.tbd */,
 				BBFCD8FD205231D900978E44 /* libsqlite3.0.tbd */,
 				BBFCD8FB205231CF00978E44 /* libc++.tbd */,
@@ -182,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFCD8E22052309F00978E44 /* OpenKit.h in Headers */,
+				BB2A76282052856700C95014 /* WeiboSDK.h in Headers */,
 				BBFCD8EF2052313200978E44 /* WXApi.h in Headers */,
+				BB2A76262052856700C95014 /* WBHttpRequest.h in Headers */,
 				BBFCD8F12052313200978E44 /* WXApiObject.h in Headers */,
 				BBFCD8F02052313200978E44 /* WechatAuthSDK.h in Headers */,
 			);
@@ -247,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2A76272052856700C95014 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,16 +318,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2A762E205285E300C95014 /* SinaWeiboShareItem.swift in Sources */,
 				BB2A760E20526A7A00C95014 /* OpenPayItem.swift in Sources */,
 				BBFCD9322052395A00978E44 /* OpenAuthorizationItem.swift in Sources */,
 				BBFCD9362052456E00978E44 /* WeChatShareItem.swift in Sources */,
 				BBFCD930205237CF00978E44 /* OpenShareItem.swift in Sources */,
 				BBFCD9062052328C00978E44 /* WeChatPayItem.swift in Sources */,
+				BB2A762A205285CA00C95014 /* SinaWeiboManager.swift in Sources */,
 				BBFCD94020525B6800978E44 /* OpenManager+Pay.swift in Sources */,
 				BBFCD9022052327300978E44 /* WeChatManager.swift in Sources */,
 				BBFCD93C2052563B00978E44 /* OpenManager+Share.swift in Sources */,
 				BBFCD93E2052566700978E44 /* OpenManager+Authorization.swift in Sources */,
 				BBFCD9042052328200978E44 /* WeChatUserItem.swift in Sources */,
+				BB2A762C205285D700C95014 /* SinaWeiboUserItem.swift in Sources */,
 				BBFCD93420523A4800978E44 /* OpenManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +468,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenKit/WeChat/SDK",
+					"$(PROJECT_DIR)/OpenKit/SinaWeibo/SDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.william.OpenKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -431,6 +496,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenKit/WeChat/SDK",
+					"$(PROJECT_DIR)/OpenKit/SinaWeibo/SDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.william.OpenKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

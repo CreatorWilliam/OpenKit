@@ -28,6 +28,13 @@ public extension OpenManager {
         handle(OpenAuthorizationItem(user, message))
       })
      
+    case .sinaWeibo:
+      
+      SinaWeiboManager.authorization(handle: { (user, message) in
+        
+        handle(OpenAuthorizationItem(user, message))
+      })
+      
     default: break
       
     }

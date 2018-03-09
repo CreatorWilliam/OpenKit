@@ -88,6 +88,9 @@ public extension OpenShareItem {
     case wechatTimeline
     /// 分享给微信好友
     case wechatSession
+    
+    /// 新浪微博
+    case sinaWeibo
   }
   
 }
@@ -142,6 +145,17 @@ internal extension OpenShareItem {
       print("缩略图为空")
       #endif
     }
+    
+    return item
+  }
+  
+  func prepareForSinaWeibo() -> SinaWeiboShareItem {
+    
+    var item = SinaWeiboShareItem()
+    
+    item.content = self.content ?? ""
+    item.link = self.link ?? ""
+    item.image = self.imageData ?? Data()
     
     return item
   }

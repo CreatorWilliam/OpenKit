@@ -20,13 +20,24 @@ public class OpenManager {
     WeChatManager.register(appID, appSecret)
   }
   
+  /// 注册新浪微博开放平台SDK
+  ///
+  /// - Parameters:
+  ///   - appID: 开放平台AppID
+  ///   - appKey: 开放平台AppKey
+  ///   - redirectURI: 开放平台回调地址
+  public class func registerSinaWeibo(withAppID appID: String, appKey: String, redirectURI: String) {
+    
+    SinaWeiboManager.register(appID, appKey, redirectURI)
+  }
+  
   /// 开放平台唤起应用时回调
   ///
   /// - Parameter url: 回调地址
   /// - Returns: 是否可以回调
   public class func handleOpen(_ url: URL) -> Bool {
     
-    return WeChatManager.handleOpen(url)
+    return WeChatManager.handleOpen(url) || SinaWeiboManager.handleOpen(url)
   }
   
 }
@@ -39,7 +50,18 @@ public extension OpenManager {
     return WeChatManager.isInstall()
   }
   
+  /// 是否安装了新浪微博
+  class func isInstallSinaWeibo() -> Bool {
+    
+    return SinaWeiboManager.isInstall()
+  }
+  
 }
+
+
+
+
+
 
 
 
