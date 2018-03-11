@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SinaWeiboManager: NSObject {
+internal class SinaWeiboManager: NSObject {
   
   static let shared: SinaWeiboManager = SinaWeiboManager()
   
@@ -25,7 +25,7 @@ public class SinaWeiboManager: NSObject {
 }
 
 // MARK: - Required
-public extension SinaWeiboManager {
+internal extension SinaWeiboManager {
   /// 注册SDK
   class func register(_ appID: String, _ appKey: String, _ redirectURI: String) {
     
@@ -55,7 +55,7 @@ public extension SinaWeiboManager {
 }
 
 // MARK: - Optional
-public extension SinaWeiboManager {
+internal extension SinaWeiboManager {
   
   /// 是否安装了新浪微博
   class func isInstall() -> Bool {
@@ -112,11 +112,11 @@ internal extension SinaWeiboManager {
 // MARK: - WeiboSDKDelegate
 extension SinaWeiboManager: WeiboSDKDelegate {
   
-  public func didReceiveWeiboRequest(_ request: WBBaseRequest!) {
+  func didReceiveWeiboRequest(_ request: WBBaseRequest!) {
     
   }
   
-  public func didReceiveWeiboResponse(_ response: WBBaseResponse!) {
+  func didReceiveWeiboResponse(_ response: WBBaseResponse!) {
     
     #if DEBUG
       print(response)
