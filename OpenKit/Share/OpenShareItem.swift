@@ -153,8 +153,39 @@ internal extension OpenShareItem {
     
     var item = SinaWeiboShareItem()
     
-    item.content = self.content ?? ""
-    item.link = self.link ?? ""
+    if let title = self.title {
+      
+      item.title = title
+      
+    } else {
+      
+      #if DEBUG
+        print("标题为空")
+      #endif
+    }
+    
+    if let content = self.content {
+      
+      item.content = content
+      
+    } else {
+      
+      #if DEBUG
+        print("描述为空")
+      #endif
+    }
+    
+    if let link = self.link {
+      
+      item.link = link
+      
+    } else {
+      
+      #if DEBUG
+        print("链接为空")
+      #endif
+    }
+    
     item.image = self.imageData ?? Data()
     
     return item

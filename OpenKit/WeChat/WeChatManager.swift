@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OtherKit
 
 internal class WeChatManager: NSObject {
   
