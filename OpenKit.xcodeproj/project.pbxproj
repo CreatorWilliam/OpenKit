@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		736C891D2056D84D00BE558E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736C891C2056D84D00BE558E /* CoreMotion.framework */; };
+		736C89212056D8B100BE558E /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736C89202056D8B100BE558E /* AlipaySDK.framework */; };
+		736C89232056D8B900BE558E /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 736C89222056D8B900BE558E /* AlipaySDK.bundle */; };
+		736C89252056D97100BE558E /* AlipayPayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C89242056D97100BE558E /* AlipayPayItem.swift */; };
+		736C89272056D98300BE558E /* AlipayManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C89262056D98300BE558E /* AlipayManger.swift */; };
 		73CE0EAE2056B91800C9B78B /* OtherKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 73CE0EAC2056B91800C9B78B /* OtherKit.h */; };
 		73CE0EED2056CC2F00C9B78B /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CE0EE92056CC2E00C9B78B /* WeiboSDK.bundle */; };
 		73CE0EEE2056CC2F00C9B78B /* WeiboSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 73CE0EEA2056CC2E00C9B78B /* WeiboSDK.h */; };
@@ -46,6 +51,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		736C891C2056D84D00BE558E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		736C89202056D8B100BE558E /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		736C89222056D8B900BE558E /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		736C89242056D97100BE558E /* AlipayPayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlipayPayItem.swift; sourceTree = "<group>"; };
+		736C89262056D98300BE558E /* AlipayManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlipayManger.swift; sourceTree = "<group>"; };
 		73CE0EA92056AC5F00C9B78B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		73CE0EAC2056B91800C9B78B /* OtherKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherKit.h; sourceTree = "<group>"; };
 		73CE0EE72056CB6E00C9B78B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -95,10 +105,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CE0EEF2056CC2F00C9B78B /* libWeiboSDK.a in Frameworks */,
+				736C89212056D8B100BE558E /* AlipaySDK.framework in Frameworks */,
 				BBFCD8EE2052313200978E44 /* libWeChatSDK.a in Frameworks */,
 				BBFCD900205231E800978E44 /* libz.tbd in Frameworks */,
 				BBFCD8FE205231D900978E44 /* libsqlite3.0.tbd in Frameworks */,
 				BBFCD8FC205231CF00978E44 /* libc++.tbd in Frameworks */,
+				736C891D2056D84D00BE558E /* CoreMotion.framework in Frameworks */,
 				BB2A7632205286E500C95014 /* ImageIO.framework in Frameworks */,
 				BB2A7634205286F300C95014 /* CoreText.framework in Frameworks */,
 				BB2A76382052873400C95014 /* Photos.framework in Frameworks */,
@@ -121,6 +133,25 @@
 				73CE0EA92056AC5F00C9B78B /* module.modulemap */,
 			);
 			path = SupportSetting;
+			sourceTree = "<group>";
+		};
+		736C891E2056D87500BE558E /* Alipay */ = {
+			isa = PBXGroup;
+			children = (
+				736C89262056D98300BE558E /* AlipayManger.swift */,
+				736C89242056D97100BE558E /* AlipayPayItem.swift */,
+				736C891F2056D88200BE558E /* SDK */,
+			);
+			path = Alipay;
+			sourceTree = "<group>";
+		};
+		736C891F2056D88200BE558E /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				736C89222056D8B900BE558E /* AlipaySDK.bundle */,
+				736C89202056D8B100BE558E /* AlipaySDK.framework */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 		BB2A761F205284B800C95014 /* SinaWeibo */ = {
@@ -172,6 +203,7 @@
 				BBFCD92E205237B500978E44 /* Pay */,
 				BBFCD8E82052310D00978E44 /* WeChat */,
 				BB2A761F205284B800C95014 /* SinaWeibo */,
+				736C891E2056D87500BE558E /* Alipay */,
 				736C891B2056D30B00BE558E /* SupportSetting */,
 				BBFCD8E12052309F00978E44 /* Info.plist */,
 			);
@@ -204,6 +236,7 @@
 		BBFCD8F22052319D00978E44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				736C891C2056D84D00BE558E /* CoreMotion.framework */,
 				73CE0EF32056CDB600C9B78B /* libc++abi.tbd */,
 				73CE0EE72056CB6E00C9B78B /* libsqlite3.tbd */,
 				BB2A76372052873400C95014 /* Photos.framework */,
@@ -325,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736C89232056D8B900BE558E /* AlipaySDK.bundle in Resources */,
 				73CE0EED2056CC2F00C9B78B /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,11 +377,13 @@
 				BBFCD930205237CF00978E44 /* OpenShareItem.swift in Sources */,
 				BBFCD9062052328C00978E44 /* WeChatPayItem.swift in Sources */,
 				BB2A762A205285CA00C95014 /* SinaWeiboManager.swift in Sources */,
+				736C89272056D98300BE558E /* AlipayManger.swift in Sources */,
 				BBFCD94020525B6800978E44 /* OpenManager+Pay.swift in Sources */,
 				BBFCD9022052327300978E44 /* WeChatManager.swift in Sources */,
 				BBFCD93C2052563B00978E44 /* OpenManager+Share.swift in Sources */,
 				BBFCD93E2052566700978E44 /* OpenManager+Authorization.swift in Sources */,
 				BBFCD9042052328200978E44 /* WeChatUserItem.swift in Sources */,
+				736C89252056D97100BE558E /* AlipayPayItem.swift in Sources */,
 				BB2A762C205285D700C95014 /* SinaWeiboUserItem.swift in Sources */,
 				BBFCD93420523A4800978E44 /* OpenManager.swift in Sources */,
 			);
@@ -480,6 +516,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenKit/Alipay/SDK",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = OpenKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -513,6 +553,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenKit/Alipay/SDK",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = OpenKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

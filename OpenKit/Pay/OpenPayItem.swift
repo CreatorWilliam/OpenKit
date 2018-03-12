@@ -15,6 +15,8 @@ public struct OpenPayItem {
   
   /// 包含微信支付相关信息
   internal var weChatItem = WeChatPayItem()
+  /// 包含支付宝支付相关信息
+  internal var alipayItem = AlipayPayItem()
   
   /// 创建微信支付Item
   ///
@@ -37,6 +39,12 @@ public struct OpenPayItem {
     self.weChatItem.timeStamp = UInt32(timeStamp)
   }
   
+  public init(alipayWithOrder string: String) {
+    
+    self.type = .alipay
+    self.alipayItem.order = string
+  }
+  
 }
 
 internal extension OpenPayItem {
@@ -45,6 +53,9 @@ internal extension OpenPayItem {
     
     /// 微信支付
     case weChat
+    
+    /// 支付宝
+    case alipay
   }
   
 }

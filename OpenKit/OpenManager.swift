@@ -37,7 +37,7 @@ public class OpenManager {
   /// - Returns: 是否可以回调
   public class func handleOpen(_ url: URL) -> Bool {
     
-    return WeChatManager.handleOpen(url) || SinaWeiboManager.handleOpen(url)
+    return WeChatManager.handleOpen(url) || SinaWeiboManager.handleOpen(url) || AlipayManager.handleOpen(url)
   }
   
 }

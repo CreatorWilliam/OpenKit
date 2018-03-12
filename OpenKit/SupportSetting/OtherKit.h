@@ -10,3 +10,5 @@
 #import "WXApi.h"
 #import "WeiboSDK.h"
 
+//支付宝
+#import <AlipaySDK/AlipaySDK.h>
