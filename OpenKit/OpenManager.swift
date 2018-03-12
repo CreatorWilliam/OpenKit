@@ -31,6 +31,14 @@ public class OpenManager {
     SinaWeiboManager.register(appID, appKey, redirectURI)
   }
   
+  /// 注册支付宝开放平台SDK
+  ///
+  /// - Parameter scheme: 调用支付的app注册在info.plist中的scheme，用于回调唤起应用
+  public class func registerAlipay(withScheme scheme: String) {
+  
+    AlipayManager.register(scheme)
+  }
+  
   /// 开放平台唤起应用时回调
   ///
   /// - Parameter url: 回调地址

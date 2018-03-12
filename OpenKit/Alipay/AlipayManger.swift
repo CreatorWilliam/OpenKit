@@ -21,6 +21,9 @@ class AlipayManager {
 // MARK: - Required
 extension AlipayManager {
   
+  /// 注册支付宝开放平台SDK
+  ///
+  /// - Parameter scheme: 调用支付的app注册在info.plist中的scheme，用于回调唤起应用
   class func register(_ scheme: String) {
     
     AlipayManager.shared.scheme = scheme
