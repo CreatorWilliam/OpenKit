@@ -6,9 +6,15 @@
 //  Copyright © 2018 William Lee. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+// WeChat
 #import "WXApi.h"
+
+//Weibo
 #import "WeiboSDK.h"
+
+//QQ
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 
 //支付宝
 #import <AlipaySDK/AlipaySDK.h>

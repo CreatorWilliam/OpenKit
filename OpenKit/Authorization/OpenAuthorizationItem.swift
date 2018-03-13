@@ -58,6 +58,8 @@ public extension OpenAuthorizationItem {
     case weChat
     /// 新浪微博授权登陆
     case sinaWeibo
+    /// QQ授权登陆
+    case qq
     
     /// 未设置授权模式
     case none
@@ -94,6 +96,30 @@ internal extension OpenAuthorizationItem {
   init(_ item: SinaWeiboUserItem?, _ message: String?) {
    
     self.type = .sinaWeibo
+    self.message = message
+    
+    self.id = item?.id
+    self.nickname = item?.nickname
+    self.avatar = item?.avatar
+    self.phone = item?.phone
+    
+    if item?.gender == 1 {
+      
+      self.gender = .male
+      
+    } else if item?.gender == 2 {
+      
+      self.gender = .female
+      
+    } else {
+      
+      self.gender = .unkown
+    }
+  }
+  
+  init(_ item: QQUserItem?, _ message: String?) {
+    
+    self.type = .qq
     self.message = message
     
     self.id = item?.id

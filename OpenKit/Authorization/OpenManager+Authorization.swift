@@ -35,6 +35,13 @@ public extension OpenManager {
         handle(OpenAuthorizationItem(user, message))
       })
       
+    case .qq:
+      
+      QQManager.authorization(handle: { (user, message) in
+        
+        handle(OpenAuthorizationItem(user, message))
+      })
+      
     default: break
       
     }

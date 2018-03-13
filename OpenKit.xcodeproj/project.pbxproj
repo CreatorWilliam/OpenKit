@@ -26,6 +26,10 @@
 		BB2A7634205286F300C95014 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2A7633205286F300C95014 /* CoreText.framework */; };
 		BB2A76362052870700C95014 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2A76352052870700C95014 /* CoreGraphics.framework */; };
 		BB2A76382052873400C95014 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2A76372052873400C95014 /* Photos.framework */; };
+		BB5BF05A20578B3B007306E3 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5BF05920578B3B007306E3 /* TencentOpenAPI.framework */; };
+		BB5BF05C20578B55007306E3 /* QQUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BF05B20578B55007306E3 /* QQUserItem.swift */; };
+		BB5BF05E20578B5C007306E3 /* QQShareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BF05D20578B5C007306E3 /* QQShareItem.swift */; };
+		BB5BF06020578B65007306E3 /* QQManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BF05F20578B65007306E3 /* QQManager.swift */; };
 		BBFCD8E22052309F00978E44 /* OpenKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BBFCD8E02052309F00978E44 /* OpenKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBFCD8EE2052313200978E44 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8EA2052313100978E44 /* libWeChatSDK.a */; };
 		BBFCD8EF2052313200978E44 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = BBFCD8EB2052313100978E44 /* WXApi.h */; };
@@ -73,6 +77,10 @@
 		BB2A7633205286F300C95014 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		BB2A76352052870700C95014 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BB2A76372052873400C95014 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		BB5BF05920578B3B007306E3 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		BB5BF05B20578B55007306E3 /* QQUserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQUserItem.swift; sourceTree = "<group>"; };
+		BB5BF05D20578B5C007306E3 /* QQShareItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQShareItem.swift; sourceTree = "<group>"; };
+		BB5BF05F20578B65007306E3 /* QQManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQManager.swift; sourceTree = "<group>"; };
 		BBFCD8DD2052309F00978E44 /* OpenKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFCD8E02052309F00978E44 /* OpenKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenKit.h; sourceTree = "<group>"; };
 		BBFCD8E12052309F00978E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,8 +112,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73CE0EEF2056CC2F00C9B78B /* libWeiboSDK.a in Frameworks */,
+				BB5BF05A20578B3B007306E3 /* TencentOpenAPI.framework in Frameworks */,
 				736C89212056D8B100BE558E /* AlipaySDK.framework in Frameworks */,
+				73CE0EEF2056CC2F00C9B78B /* libWeiboSDK.a in Frameworks */,
 				BBFCD8EE2052313200978E44 /* libWeChatSDK.a in Frameworks */,
 				BBFCD900205231E800978E44 /* libz.tbd in Frameworks */,
 				BBFCD8FE205231D900978E44 /* libsqlite3.0.tbd in Frameworks */,
@@ -176,6 +185,25 @@
 			path = SDK;
 			sourceTree = "<group>";
 		};
+		BB5BF05720578B0A007306E3 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				BB5BF05F20578B65007306E3 /* QQManager.swift */,
+				BB5BF05D20578B5C007306E3 /* QQShareItem.swift */,
+				BB5BF05B20578B55007306E3 /* QQUserItem.swift */,
+				BB5BF05820578B17007306E3 /* SDK */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		BB5BF05820578B17007306E3 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				BB5BF05920578B3B007306E3 /* TencentOpenAPI.framework */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
 		BBFCD8D32052309F00978E44 = {
 			isa = PBXGroup;
 			children = (
@@ -198,11 +226,12 @@
 			children = (
 				BBFCD8E02052309F00978E44 /* OpenKit.h */,
 				BBFCD93320523A4800978E44 /* OpenManager.swift */,
-				BBFCD92D205237AC00978E44 /* Authorization */,
 				BBFCD92C205237A200978E44 /* Share */,
+				BBFCD92D205237AC00978E44 /* Authorization */,
 				BBFCD92E205237B500978E44 /* Pay */,
 				BBFCD8E82052310D00978E44 /* WeChat */,
 				BB2A761F205284B800C95014 /* SinaWeibo */,
+				BB5BF05720578B0A007306E3 /* QQ */,
 				736C891E2056D87500BE558E /* Alipay */,
 				736C891B2056D30B00BE558E /* SupportSetting */,
 				BBFCD8E12052309F00978E44 /* Info.plist */,
@@ -374,17 +403,20 @@
 				BB2A760E20526A7A00C95014 /* OpenPayItem.swift in Sources */,
 				BBFCD9322052395A00978E44 /* OpenAuthorizationItem.swift in Sources */,
 				BBFCD9362052456E00978E44 /* WeChatShareItem.swift in Sources */,
+				BB5BF06020578B65007306E3 /* QQManager.swift in Sources */,
 				BBFCD930205237CF00978E44 /* OpenShareItem.swift in Sources */,
 				BBFCD9062052328C00978E44 /* WeChatPayItem.swift in Sources */,
 				BB2A762A205285CA00C95014 /* SinaWeiboManager.swift in Sources */,
 				736C89272056D98300BE558E /* AlipayManger.swift in Sources */,
 				BBFCD94020525B6800978E44 /* OpenManager+Pay.swift in Sources */,
+				BB5BF05C20578B55007306E3 /* QQUserItem.swift in Sources */,
 				BBFCD9022052327300978E44 /* WeChatManager.swift in Sources */,
 				BBFCD93C2052563B00978E44 /* OpenManager+Share.swift in Sources */,
 				BBFCD93E2052566700978E44 /* OpenManager+Authorization.swift in Sources */,
 				BBFCD9042052328200978E44 /* WeChatUserItem.swift in Sources */,
 				736C89252056D97100BE558E /* AlipayPayItem.swift in Sources */,
 				BB2A762C205285D700C95014 /* SinaWeiboUserItem.swift in Sources */,
+				BB5BF05E20578B5C007306E3 /* QQShareItem.swift in Sources */,
 				BBFCD93420523A4800978E44 /* OpenManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +551,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenKit/Alipay/SDK",
+					"$(PROJECT_DIR)/OpenKit/QQ/SDK",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = OpenKit/Info.plist;
@@ -556,6 +589,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenKit/Alipay/SDK",
+					"$(PROJECT_DIR)/OpenKit/QQ/SDK",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = OpenKit/Info.plist;

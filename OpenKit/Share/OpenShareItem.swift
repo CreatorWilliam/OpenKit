@@ -89,6 +89,9 @@ public extension OpenShareItem {
     /// 分享给微信好友
     case wechatSession
     
+    /// 分享给QQ好友
+    case qqFriends
+    
     /// 新浪微博
     case sinaWeibo
   }
@@ -152,6 +155,48 @@ internal extension OpenShareItem {
   func prepareForSinaWeibo() -> SinaWeiboShareItem {
     
     var item = SinaWeiboShareItem()
+    
+    if let title = self.title {
+      
+      item.title = title
+      
+    } else {
+      
+      #if DEBUG
+        print("标题为空")
+      #endif
+    }
+    
+    if let content = self.content {
+      
+      item.content = content
+      
+    } else {
+      
+      #if DEBUG
+        print("描述为空")
+      #endif
+    }
+    
+    if let link = self.link {
+      
+      item.link = link
+      
+    } else {
+      
+      #if DEBUG
+        print("链接为空")
+      #endif
+    }
+    
+    item.image = self.imageData ?? Data()
+    
+    return item
+  }
+  
+  func prepareForQQ() -> QQShareItem {
+    
+    var item = QQShareItem()
     
     if let title = self.title {
       

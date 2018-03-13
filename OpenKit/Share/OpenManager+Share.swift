@@ -42,6 +42,13 @@ public extension OpenManager {
       
         handle(isSuccess, message)
       })
+      
+    case .qqFriends:
+      
+      QQManager.share(with: item.prepareForQQ(), handle: { (isSuccess, message) in
+        
+        handle(isSuccess, message)
+      })
     }
     
   }
