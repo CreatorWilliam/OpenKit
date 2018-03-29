@@ -17,4 +17,4 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 
 //支付宝
-#import <AlipaySDK/AlipaySDK.h>
+//#import <AlipaySDK/AlipaySDK.h>

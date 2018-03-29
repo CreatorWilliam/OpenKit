@@ -15,7 +15,6 @@ internal class WeChatManager: NSObject {
   
   fileprivate var authorizationHandle: WeChatManager.AuthorizationHandle?
   fileprivate var shareHandle: WeChatManager.ShareHandle?
-  fileprivate var payHandle: PayHandle?
   
   fileprivate var appID: String = ""
   fileprivate var appSecret: String = ""
@@ -122,31 +121,6 @@ internal extension WeChatManager {
   
 }
 
-// MARK: - Pay
-internal extension WeChatManager {
-  
-  typealias PayHandle = (_ isSuccess: Bool, _ message: String) -> Void
-  class func pay(with item: WeChatPayItem, handle: @escaping WeChatManager.PayHandle) {
-    
-    WeChatManager.shared.payHandle = handle
-    
-    let request = PayReq()
-    request.partnerId           = item.partnerId
-    request.prepayId            = item.prepayId
-    request.nonceStr            = item.nonceStr
-    request.timeStamp           = item.timeStamp
-    request.package             = item.package// "Sign=WXPay"
-    request.sign                = item.sign
-    let result = WXApi.send(request)
-    if result == false {
-      #if DEBUG
-      print("支付失败")
-      #endif
-    }
-  }
-  
-}
-
 // MARK: - WXApiDelegate
 extension WeChatManager: WXApiDelegate {
   
@@ -164,13 +138,6 @@ extension WeChatManager: WXApiDelegate {
       //微信登录回调
       guard let response = resp as? SendAuthResp else { return }
       self.handleSendAuthorizationResponse(response)
-      
-    }
-    else if resp.isKind(of: PayResp.self) {
-      
-      //微信支付回调
-      guard let response = resp as? PayResp else { return }
-      self.handleSendPayResponse(response)
       
     }
     else {
@@ -238,24 +205,6 @@ fileprivate extension WeChatManager {
       })
       
     })
-    
-  }
-  
-  func handleSendPayResponse(_ response: PayResp) {
-    
-    if response.errCode == WXSuccess.rawValue {
-      
-      self.payHandle?(true, "微信支付成功")
-      
-    }
-    else if response.errCode == WXErrCodeUserCancel.rawValue {
-      
-      self.payHandle?(false, "取消支付")
-    }
-    else {
-      
-      self.payHandle?(false, "微信支付失败：错误码-\(response.errCode)错误信息-\(response.errStr)")
-    }
     
   }
   

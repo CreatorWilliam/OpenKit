@@ -36,14 +36,6 @@ public extension OpenManager {
     SinaWeiboManager.register(appID, appKey, redirectURI)
   }
   
-  /// 注册支付宝开放平台SDK
-  ///
-  /// - Parameter scheme: 调用支付的app注册在info.plist中的scheme，用于回调唤起应用
-  public class func registerAlipay(withScheme scheme: String) {
-    
-    AlipayManager.register(scheme)
-  }
-  
 }
 
 // MARK: - HandleOpen
@@ -55,7 +47,7 @@ public extension OpenManager {
   /// - Returns: 是否可以回调
   public class func handleOpen(_ url: URL) -> Bool {
     
-    return WeChatManager.handleOpen(url) || SinaWeiboManager.handleOpen(url) || AlipayManager.handleOpen(url) || QQManager.handleOpen(url)
+    return WeChatManager.handleOpen(url) || SinaWeiboManager.handleOpen(url) || QQManager.handleOpen(url)
   }
   
 }
