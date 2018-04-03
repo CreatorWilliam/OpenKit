@@ -31,9 +31,19 @@ public extension OpenManager {
   ///   - appID: 开放平台AppID
   ///   - appKey: 开放平台AppKey
   ///   - redirectURI: 开放平台回调地址
-  public class func registerSinaWeibo(withAppID appID: String, appKey: String, redirectURI: String) {
+  public class func registerSinaWeiboSDK(withAppID appID: String, appKey: String, redirectURI: String) {
     
     SinaWeiboManager.register(appID, appKey, redirectURI)
+  }
+  
+  /// 注册QQ开放平台SDK
+  ///
+  /// - Parameters:
+  ///   - appID: 开放平台AppID
+  ///   - appSecret: 开放平台AppSecret
+  public class func registerQQSDK(withAppID appID: String, appSecret: String) {
+    
+    QQManager.register(appID, appSecret)
   }
   
 }
