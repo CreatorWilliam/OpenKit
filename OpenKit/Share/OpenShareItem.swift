@@ -51,7 +51,7 @@ public struct OpenShareItem {
     
     if let link = link {
       
-      self.link = link
+      self.link = link.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
     }
     
     if let image = image as? UIImage {

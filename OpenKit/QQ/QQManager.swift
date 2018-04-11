@@ -12,12 +12,12 @@ internal class QQManager: NSObject {
   
   static let shared: QQManager = QQManager()
   
-  fileprivate var authorizationHandle: QQManager.AuthorizationHandle?
-  fileprivate var shareHandle: QQManager.ShareHandle?
+  private var authorizationHandle: QQManager.AuthorizationHandle?
+  private var shareHandle: QQManager.ShareHandle?
   
-  fileprivate var appID: String = ""
-  fileprivate var appSecret: String = ""
-  fileprivate var tencentOAuth: TencentOAuth?
+  private var appID: String = ""
+  private var appSecret: String = ""
+  private var tencentOAuth: TencentOAuth?
   
 }
 
@@ -89,7 +89,8 @@ internal extension QQManager {
     let code = QQApiInterface.send(request)
     
     
-    /*  QQApiSendResultCode 说明
+    /*
+     QQApiSendResultCode 说明
      EQQAPISENDSUCESS = 0,                      操作成功
      EQQAPIQQNOTINSTALLED = 1,                   没有安装QQ
      EQQAPIQQNOTSUPPORTAPI = 2,
@@ -216,7 +217,7 @@ extension QQManager: TencentSessionDelegate {
 }
 
 // MARK: - Handle
-fileprivate extension QQManager {
+private extension QQManager {
   
   func handleSendMessageResponse(_ response: SendMessageToQQResp) {
     

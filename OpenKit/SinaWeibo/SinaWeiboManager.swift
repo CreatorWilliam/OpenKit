@@ -13,16 +13,16 @@ internal class SinaWeiboManager: NSObject {
   
   static let shared: SinaWeiboManager = SinaWeiboManager()
   
-  fileprivate var authorizationHandle: SinaWeiboManager.AuthorizationHandle?
-  fileprivate var shareHandle: SinaWeiboManager.ShareHandle?
+  private var authorizationHandle: SinaWeiboManager.AuthorizationHandle?
+  private var shareHandle: SinaWeiboManager.ShareHandle?
   
-  fileprivate var appID: String = ""
-  fileprivate var appKey: String = ""
-  fileprivate var redirectURI: String = ""
+  private var appID: String = ""
+  private var appKey: String = ""
+  private var redirectURI: String = ""
   
-  fileprivate var accessToken: String?
-  fileprivate var refreshToken: String?
-  fileprivate var userID: String?
+  private var accessToken: String?
+  private var refreshToken: String?
+  private var userID: String?
 }
 
 // MARK: - Required
@@ -76,6 +76,10 @@ internal extension SinaWeiboManager {
     let request = WBAuthorizeRequest()
     request.redirectURI = SinaWeiboManager.shared.redirectURI
     request.scope = "all"
+//    request.userInfo = ["SSO_From": "ShareViewController",
+//                        "Other_Info_1": 123,
+//                        "Other_Info_2": ["obj1", "obj2"],
+//                        "Other_Info_3": ["key1": "obj1", "key2": "obj2"]]
     WeiboSDK.send(request)
   }
 }
@@ -179,21 +183,16 @@ extension SinaWeiboManager: WBHttpRequestDelegate {
       if let gender = result["gender"] as? String {
         
         switch gender {
-        case "m":
-          
-          user.gender = 1
-          
-        case "f":
-          
-          user.gender = 2
-        default:
-          break
+        case "m": user.gender = 1
+        case "f": user.gender = 2
+        default: break
         }
       }
       user.nickname = result["screen_name"] as? String
       
       self.authorizationHandle?(user, "获取用户数据成功")
     }
+    
   }
   
   public func request(_ request: WBHttpRequest!, didFailWithError error: Error!) {
@@ -210,24 +209,14 @@ extension SinaWeiboManager: WBHttpRequestDelegate {
 }
 
 // MARK: - Handle
-fileprivate extension SinaWeiboManager {
+private extension SinaWeiboManager {
   
   func handleSendMessageResponse(_ response: WBSendMessageToWeiboResponse) {
     
     switch response.statusCode {
-    case .success:
-      
-      self.shareHandle?(true, "分享成功")
-      
-    case .userCancel:
-      
-      self.shareHandle?(false, "取消分享")
-      return
-      
-    default:
-      
-      self.shareHandle?(false, "分享失败")
-      return
+    case .success: self.shareHandle?(true, "分享成功")
+    case .userCancel: self.shareHandle?(false, "取消分享")
+    default: self.shareHandle?(false, "分享失败")
     }
     
     //      self.accessToken = response.authResponse.accessToken
@@ -265,7 +254,7 @@ fileprivate extension SinaWeiboManager {
 }
 
 // MARK: - Utility
-fileprivate extension SinaWeiboManager {
+private extension SinaWeiboManager {
   
   enum APIPath: String {
     

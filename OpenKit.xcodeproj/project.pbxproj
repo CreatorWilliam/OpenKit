@@ -25,6 +25,9 @@
 		BB5BF05C20578B55007306E3 /* QQUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BF05B20578B55007306E3 /* QQUserItem.swift */; };
 		BB5BF05E20578B5C007306E3 /* QQShareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BF05D20578B5C007306E3 /* QQShareItem.swift */; };
 		BB5BF06020578B65007306E3 /* QQManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BF05F20578B65007306E3 /* QQManager.swift */; };
+		BB7C31B8207B65EA00584884 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8FD205231D900978E44 /* libsqlite3.0.tbd */; };
+		BB7C31B9207B665700584884 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8FF205231E800978E44 /* libz.tbd */; };
+		BB7C31BA207B666000584884 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8FB205231CF00978E44 /* libc++.tbd */; };
 		BBFCD8E22052309F00978E44 /* OpenKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BBFCD8E02052309F00978E44 /* OpenKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBFCD8EE2052313200978E44 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8EA2052313100978E44 /* libWeChatSDK.a */; };
 		BBFCD8EF2052313200978E44 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = BBFCD8EB2052313100978E44 /* WXApi.h */; };
@@ -34,9 +37,6 @@
 		BBFCD8F6205231A800978E44 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8F5205231A800978E44 /* CoreTelephony.framework */; };
 		BBFCD8F8205231B100978E44 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8F7205231B100978E44 /* CFNetwork.framework */; };
 		BBFCD8FA205231BE00978E44 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8F9205231BE00978E44 /* Security.framework */; };
-		BBFCD8FC205231CF00978E44 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8FB205231CF00978E44 /* libc++.tbd */; };
-		BBFCD8FE205231D900978E44 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8FD205231D900978E44 /* libsqlite3.0.tbd */; };
-		BBFCD900205231E800978E44 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCD8FF205231E800978E44 /* libz.tbd */; };
 		BBFCD9022052327300978E44 /* WeChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFCD9012052327300978E44 /* WeChatManager.swift */; };
 		BBFCD9042052328200978E44 /* WeChatUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFCD9032052328200978E44 /* WeChatUserItem.swift */; };
 		BBFCD930205237CF00978E44 /* OpenShareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFCD92F205237CF00978E44 /* OpenShareItem.swift */; };
@@ -98,12 +98,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7C31BA207B666000584884 /* libc++.tbd in Frameworks */,
+				BB7C31B9207B665700584884 /* libz.tbd in Frameworks */,
+				BB7C31B8207B65EA00584884 /* libsqlite3.0.tbd in Frameworks */,
 				BB5BF05A20578B3B007306E3 /* TencentOpenAPI.framework in Frameworks */,
 				73CE0EEF2056CC2F00C9B78B /* libWeiboSDK.a in Frameworks */,
 				BBFCD8EE2052313200978E44 /* libWeChatSDK.a in Frameworks */,
-				BBFCD900205231E800978E44 /* libz.tbd in Frameworks */,
-				BBFCD8FE205231D900978E44 /* libsqlite3.0.tbd in Frameworks */,
-				BBFCD8FC205231CF00978E44 /* libc++.tbd in Frameworks */,
 				736C891D2056D84D00BE558E /* CoreMotion.framework in Frameworks */,
 				BB2A7632205286E500C95014 /* ImageIO.framework in Frameworks */,
 				BB2A7634205286F300C95014 /* CoreText.framework in Frameworks */,

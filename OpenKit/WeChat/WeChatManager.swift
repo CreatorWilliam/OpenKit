@@ -6,31 +6,30 @@
 //  Copyright © 2018 William Lee. All rights reserved.
 //
 
-import Foundation
 import OtherKit
 
 internal class WeChatManager: NSObject {
   
   static let shared: WeChatManager = WeChatManager()
   
-  fileprivate var authorizationHandle: WeChatManager.AuthorizationHandle?
-  fileprivate var shareHandle: WeChatManager.ShareHandle?
+  private var authorizationHandle: WeChatManager.AuthorizationHandle?
+  private var shareHandle: WeChatManager.ShareHandle?
   
-  fileprivate var appID: String = ""
-  fileprivate var appSecret: String = ""
+  private var appID: String = ""
+  private var appSecret: String = ""
   
   /// 接口调用凭证
-  fileprivate var access_token: String?
+  private var access_token: String?
   /// access_token接口调用凭证超时时间，单位（秒）
-  fileprivate var expires_in: String?
+  private var expires_in: String?
   /// 用户刷新access_token
-  fileprivate var refresh_token: String?
+  private var refresh_token: String?
   /// 授权用户唯一标识
-  fileprivate var openid: String?
+  private var openid: String?
   /// 用户授权的作用域，使用逗号（,）分隔
-  fileprivate var scope: String?
+  private var scope: String?
   
-  fileprivate var user: WeChatUserItem = WeChatUserItem()
+  private var user: WeChatUserItem = WeChatUserItem()
   
   
   private override init() { }
@@ -155,7 +154,7 @@ extension WeChatManager: WXApiDelegate {
 }
 
 // MARK: - Handle
-fileprivate extension WeChatManager {
+private extension WeChatManager {
   
   func handleSendMessageResponse(_ response: SendMessageToWXResp) {
     
@@ -211,7 +210,7 @@ fileprivate extension WeChatManager {
 }
 
 // MARK: - Utility
-fileprivate extension WeChatManager {
+private extension WeChatManager {
   
   typealias CompleteHandle = (_ isSuccess: Bool) -> Void
   

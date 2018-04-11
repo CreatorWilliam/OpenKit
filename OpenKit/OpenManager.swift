@@ -56,7 +56,7 @@ public extension OpenManager {
   /// - Parameter url: 回调地址
   /// - Returns: 是否可以回调
   public class func handleOpen(_ url: URL) -> Bool {
-    
+
     return WeChatManager.handleOpen(url) || SinaWeiboManager.handleOpen(url) || QQManager.handleOpen(url)
   }
   

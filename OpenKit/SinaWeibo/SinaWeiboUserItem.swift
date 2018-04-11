@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct SinaWeiboUserItem {
+internal struct SinaWeiboUserItem {
   
   /// 当且仅当该移动应用已获得该用户的userinfo授权时，才会出现该字段，可用于用户唯一标识
   var id: String?
