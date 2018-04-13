@@ -26,7 +26,7 @@ public struct OpenAuthorizationItem {
   /// 手机
   public let phone: String?
   
-  fileprivate init() {
+  private init() {
     
     self.type = .none
     self.message = nil

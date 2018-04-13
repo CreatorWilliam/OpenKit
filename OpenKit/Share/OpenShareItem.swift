@@ -238,7 +238,7 @@ internal extension OpenShareItem {
   
 }
 
-fileprivate extension OpenShareItem {
+private extension OpenShareItem {
   
   /// String -> UIImage
   mutating func convertToImage(with string: String) {
