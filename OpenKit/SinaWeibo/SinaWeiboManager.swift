@@ -73,6 +73,8 @@ internal extension SinaWeiboManager {
   typealias AuthorizationHandle = (_ user: SinaWeiboUserItem?, _ message: String) -> Void
   class func authorization(handle: @escaping AuthorizationHandle) {
     
+    SinaWeiboManager.shared.authorizationHandle = handle
+    
     let request = WBAuthorizeRequest()
     request.redirectURI = SinaWeiboManager.shared.redirectURI
     request.scope = "all"
