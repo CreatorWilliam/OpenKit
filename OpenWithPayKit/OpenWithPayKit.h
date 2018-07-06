@@ -2,7 +2,7 @@
 //  OpenWithPayKit.h
 //  OpenWithPayKit
 //
-//  Created by William Lee on 2018/6/22.
+//  Created by William Lee on 2018/7/6.
 //  Copyright © 2018 William Lee. All rights reserved.
 //
 
