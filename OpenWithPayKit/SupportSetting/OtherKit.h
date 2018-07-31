@@ -1,5 +1,5 @@
 //
-//  OCModel.h
+//  OtherKit.h
 //  OpenKit
 //
 //  Created by William Lee on 12/03/2018.

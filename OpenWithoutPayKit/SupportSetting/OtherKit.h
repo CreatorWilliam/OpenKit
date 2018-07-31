@@ -1,5 +1,5 @@
 //
-//  OCModel.h
+//  OtherKit.h
 //  OpenKit
 //
 //  Created by William Lee on 12/03/2018.
@@ -16,5 +16,3 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-//支付宝
-//#import <AlipaySDK/AlipaySDK.h>
