@@ -29,7 +29,7 @@ internal extension QQManager {
     
     QQManager.shared.appID = appID
     QQManager.shared.appSecret = appSecret
-    QQManager.shared.tencentOAuth = TencentOAuth(appId: appID, andDelegate: shared)
+    QQManager.shared.tencentOAuth = TencentOAuth(appId: appID, andDelegate: QQManager.shared)
   }
   
   /// SDK来操作打开URL
