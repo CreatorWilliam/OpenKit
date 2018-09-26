@@ -275,7 +275,7 @@ private extension OpenShareItem {
     
     if let image = self.image {
       
-      self.imageData = UIImageJPEGRepresentation(image, 0.9)
+      self.imageData = image.jpegData(compressionQuality: 0.9)
     }
   }
   
