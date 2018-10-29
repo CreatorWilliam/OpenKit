@@ -39,37 +39,28 @@ public struct OpenShareItem {
   ///   - image: 缩略图
   public mutating func update(title: String?, content: String?, link: String?, image: Any?) {
     
-    if let title = title {
-      
-      self.title = title
-    }
+    if let title = title { self.title = title }
     
-    if let content = content {
-      
-      self.content = content
-    }
+    if let content = content { self.content = content }
     
-    if let link = link {
-      
-      self.link = link.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-    }
+    if let link = link { self.link = link.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) }
     
     if let image = image as? UIImage {
       
       self.image = image
       self.redrawImage()
       
-    } else if let image = image as? Data {
+    } else if let data = image as? Data {
       
-      self.convertToImage(with: image)
+      self.convertToImage(with: data)
       
-    } else if let image = image as? URL {
+    } else if let url = image as? URL {
       
-      self.convertToImage(with: image)
+      self.convertToImage(with: url)
       
-    } else if let image = image as? String {
+    } else if let urlString = image as? String {
       
-      self.convertToImage(with: image)
+      self.convertToImage(with: urlString)
       
     } else {
       

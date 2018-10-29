@@ -157,7 +157,7 @@ extension WeChatManager: WXApiDelegate {
 private extension WeChatManager {
   
   func handleSendMessageResponse(_ response: SendMessageToWXResp) {
-    
+
     if response.errCode == WXSuccess.rawValue {
       
       self.shareHandle?(true, "分享成功")

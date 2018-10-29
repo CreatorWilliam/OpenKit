@@ -196,7 +196,7 @@
 		BB662EBC20EF901E00D91B61 = {
 			isa = PBXGroup;
 			children = (
-				BB662EC820EF901E00D91B61 /* OpenKit */,
+				BB662EC820EF901E00D91B61 /* Core */,
 				BB662ED720EF905500D91B61 /* OpenWithPayKit */,
 				BB662EE420EF906E00D91B61 /* OpenWithoutPayKit */,
 				BB662EC720EF901E00D91B61 /* Products */,
@@ -213,7 +213,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB662EC820EF901E00D91B61 /* OpenKit */ = {
+		BB662EC820EF901E00D91B61 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				BB662F7720EF932700D91B61 /* OpenManager.swift */,
@@ -223,7 +223,7 @@
 				BB662F2D20EF912200D91B61 /* SinaWeibo */,
 				BB662F2320EF912200D91B61 /* WeChat */,
 			);
-			path = OpenKit;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		BB662ED720EF905500D91B61 /* OpenWithPayKit */ = {
@@ -835,6 +835,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.william.OpenWithoutPayKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SECTORDER_FLAGS = "-ObjC";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/OpenWithoutPayKit/SupportSetting/";
 				SWIFT_VERSION = 4.2;
@@ -870,6 +871,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.william.OpenWithoutPayKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SECTORDER_FLAGS = "-ObjC";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/OpenWithoutPayKit/SupportSetting/";
 				SWIFT_VERSION = 4.2;
