@@ -1,6 +1,6 @@
 module OtherKit {
   //由于module.modulemap和OtherKit.h是在同一个文件夹的，如果不是同一个，路径要写全
-  header "OtherKit.h"
+  header "OtherWithoutPayKit.h"
   export *
 }
 

@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D131F6A22828B5D00F90C04 /* OtherWithoutPayKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D131F6922828B5D00F90C04 /* OtherWithoutPayKit.h */; };
+		3D131F702282BA5900F90C04 /* WeChatPayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D131F6F2282BA5900F90C04 /* WeChatPayItem.swift */; };
+		3D131F822282C54000F90C04 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D131F7E2282C53F00F90C04 /* WXApi.h */; };
+		3D131F832282C54000F90C04 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D131F7F2282C53F00F90C04 /* libWeChatSDK.a */; };
+		3D131F842282C54000F90C04 /* WechatAuthSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D131F802282C54000F90C04 /* WechatAuthSDK.h */; };
+		3D131F852282C54000F90C04 /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D131F812282C54000F90C04 /* WXApiObject.h */; };
+		3D5321D021990991001D9C4E /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D5321CE21990990001D9C4E /* AlipaySDK.bundle */; };
+		3D5321D121990991001D9C4E /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5321CF21990991001D9C4E /* AlipaySDK.framework */; };
+		3DD1382321990B9800E609B9 /* AlipayPayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1382221990B9800E609B9 /* AlipayPayItem.swift */; };
+		3DD1382521990BBA00E609B9 /* AlipayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1382421990BBA00E609B9 /* AlipayManager.swift */; };
+		3DD1382821991ACD00E609B9 /* OpenManager+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1382721991ACD00E609B9 /* OpenManager+Pay.swift */; };
+		3DD1382A21991B1500E609B9 /* OpenPayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1382921991B1500E609B9 /* OpenPayItem.swift */; };
+		3DD1382C21991C5E00E609B9 /* OpenManager+HandleOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1382B21991C5E00E609B9 /* OpenManager+HandleOpen.swift */; };
+		3DD1382E21991C7D00E609B9 /* OpenManager+HandleOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1382D21991C7D00E609B9 /* OpenManager+HandleOpen.swift */; };
 		BB662EDA20EF905500D91B61 /* OpenWithPayKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662ED820EF905500D91B61 /* OpenWithPayKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB662EE720EF906E00D91B61 /* OpenWithoutPayKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662EE520EF906E00D91B61 /* OpenWithoutPayKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB662EFD20EF90E300D91B61 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB662EED20EF90E200D91B61 /* TencentOpenAPI.framework */; };
@@ -18,17 +32,12 @@
 		BB662F0320EF90E300D91B61 /* WechatAuthSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662EF720EF90E300D91B61 /* WechatAuthSDK.h */; };
 		BB662F0420EF90E300D91B61 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662EF820EF90E300D91B61 /* WXApi.h */; };
 		BB662F0520EF90E300D91B61 /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662EF920EF90E300D91B61 /* WXApiObject.h */; };
-		BB662F0620EF90E300D91B61 /* OtherKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662EFC20EF90E300D91B61 /* OtherKit.h */; };
 		BB662F1920EF90EA00D91B61 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB662F0920EF90E900D91B61 /* TencentOpenAPI.framework */; };
 		BB662F1A20EF90EA00D91B61 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB662F0C20EF90EA00D91B61 /* libWeiboSDK.a */; };
 		BB662F1B20EF90EB00D91B61 /* WBHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662F0D20EF90EA00D91B61 /* WBHttpRequest.h */; };
 		BB662F1C20EF90EB00D91B61 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB662F0E20EF90EA00D91B61 /* WeiboSDK.bundle */; };
 		BB662F1D20EF90EB00D91B61 /* WeiboSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662F0F20EF90EA00D91B61 /* WeiboSDK.h */; };
-		BB662F1E20EF90EB00D91B61 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB662F1220EF90EA00D91B61 /* libWeChatSDK.a */; };
-		BB662F1F20EF90EB00D91B61 /* WechatAuthSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662F1320EF90EA00D91B61 /* WechatAuthSDK.h */; };
-		BB662F2020EF90EB00D91B61 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662F1420EF90EA00D91B61 /* WXApi.h */; };
-		BB662F2120EF90EB00D91B61 /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662F1520EF90EA00D91B61 /* WXApiObject.h */; };
-		BB662F2220EF90EB00D91B61 /* OtherKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662F1820EF90EA00D91B61 /* OtherKit.h */; };
+		BB662F2220EF90EB00D91B61 /* OtherWithPayKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB662F1820EF90EA00D91B61 /* OtherWithPayKit.h */; };
 		BB662F3520EF912200D91B61 /* WeChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB662F2420EF912200D91B61 /* WeChatManager.swift */; };
 		BB662F3620EF912200D91B61 /* WeChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB662F2420EF912200D91B61 /* WeChatManager.swift */; };
 		BB662F3720EF912200D91B61 /* WeChatShareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB662F2520EF912200D91B61 /* WeChatShareItem.swift */; };
@@ -86,6 +95,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D131F6822828B5D00F90C04 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		3D131F6922828B5D00F90C04 /* OtherWithoutPayKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherWithoutPayKit.h; sourceTree = "<group>"; };
+		3D131F6F2282BA5900F90C04 /* WeChatPayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatPayItem.swift; sourceTree = "<group>"; };
+		3D131F7E2282C53F00F90C04 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		3D131F7F2282C53F00F90C04 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		3D131F802282C54000F90C04 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		3D131F812282C54000F90C04 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		3D5321CE21990990001D9C4E /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		3D5321CF21990991001D9C4E /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		3DD1382221990B9800E609B9 /* AlipayPayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlipayPayItem.swift; sourceTree = "<group>"; };
+		3DD1382421990BBA00E609B9 /* AlipayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlipayManager.swift; sourceTree = "<group>"; };
+		3DD1382721991ACD00E609B9 /* OpenManager+Pay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenManager+Pay.swift"; sourceTree = "<group>"; };
+		3DD1382921991B1500E609B9 /* OpenPayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPayItem.swift; sourceTree = "<group>"; };
+		3DD1382B21991C5E00E609B9 /* OpenManager+HandleOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenManager+HandleOpen.swift"; sourceTree = "<group>"; };
+		3DD1382D21991C7D00E609B9 /* OpenManager+HandleOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenManager+HandleOpen.swift"; sourceTree = "<group>"; };
 		BB662ED620EF905500D91B61 /* OpenWithPayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenWithPayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB662ED820EF905500D91B61 /* OpenWithPayKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenWithPayKit.h; sourceTree = "<group>"; };
 		BB662ED920EF905500D91B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,19 +125,13 @@
 		BB662EF720EF90E300D91B61 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		BB662EF820EF90E300D91B61 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		BB662EF920EF90E300D91B61 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		BB662EFB20EF90E300D91B61 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		BB662EFC20EF90E300D91B61 /* OtherKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherKit.h; sourceTree = "<group>"; };
 		BB662F0920EF90E900D91B61 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		BB662F0C20EF90EA00D91B61 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		BB662F0D20EF90EA00D91B61 /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
 		BB662F0E20EF90EA00D91B61 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		BB662F0F20EF90EA00D91B61 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
-		BB662F1220EF90EA00D91B61 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		BB662F1320EF90EA00D91B61 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
-		BB662F1420EF90EA00D91B61 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		BB662F1520EF90EA00D91B61 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		BB662F1720EF90EA00D91B61 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		BB662F1820EF90EA00D91B61 /* OtherKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherKit.h; sourceTree = "<group>"; };
+		BB662F1820EF90EA00D91B61 /* OtherWithPayKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherWithPayKit.h; sourceTree = "<group>"; };
 		BB662F2420EF912200D91B61 /* WeChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatManager.swift; sourceTree = "<group>"; };
 		BB662F2520EF912200D91B61 /* WeChatShareItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatShareItem.swift; sourceTree = "<group>"; };
 		BB662F2620EF912200D91B61 /* WeChatUserItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatUserItem.swift; sourceTree = "<group>"; };
@@ -148,8 +166,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB662F1E20EF90EB00D91B61 /* libWeChatSDK.a in Frameworks */,
 				BB662F1A20EF90EA00D91B61 /* libWeiboSDK.a in Frameworks */,
+				3D131F832282C54000F90C04 /* libWeChatSDK.a in Frameworks */,
+				3D5321D121990991001D9C4E /* AlipaySDK.framework in Frameworks */,
 				BB662F1920EF90EA00D91B61 /* TencentOpenAPI.framework in Frameworks */,
 				BB662F6920EF924900D91B61 /* libz.tbd in Frameworks */,
 				BB662F6720EF924200D91B61 /* libsqlite3.0.tbd in Frameworks */,
@@ -193,6 +212,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D131F6722828B4700F90C04 /* SupportSetting */ = {
+			isa = PBXGroup;
+			children = (
+				3D131F6822828B5D00F90C04 /* module.modulemap */,
+				3D131F6922828B5D00F90C04 /* OtherWithoutPayKit.h */,
+			);
+			path = SupportSetting;
+			sourceTree = "<group>";
+		};
+		3D131F6D2282BA0E00F90C04 /* Alipay */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1382421990BBA00E609B9 /* AlipayManager.swift */,
+				3DD1382221990B9800E609B9 /* AlipayPayItem.swift */,
+			);
+			path = Alipay;
+			sourceTree = "<group>";
+		};
+		3D131F6E2282BA2700F90C04 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				3D131F6D2282BA0E00F90C04 /* Alipay */,
+				BB662F3120EF912200D91B61 /* QQ */,
+				BB662F2D20EF912200D91B61 /* SinaWeibo */,
+				BB662F2320EF912200D91B61 /* WeChat */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		3D5321CC2199096B001D9C4E /* Alipay */ = {
+			isa = PBXGroup;
+			children = (
+				3D5321CD2199097E001D9C4E /* SDK */,
+			);
+			path = Alipay;
+			sourceTree = "<group>";
+		};
+		3D5321CD2199097E001D9C4E /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				3D5321CE21990990001D9C4E /* AlipaySDK.bundle */,
+				3D5321CF21990991001D9C4E /* AlipaySDK.framework */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		3DD1382621991A8D00E609B9 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1382721991ACD00E609B9 /* OpenManager+Pay.swift */,
+				3DD1382921991B1500E609B9 /* OpenPayItem.swift */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
 		BB662EBC20EF901E00D91B61 = {
 			isa = PBXGroup;
 			children = (
@@ -218,10 +292,9 @@
 			children = (
 				BB662F7720EF932700D91B61 /* OpenManager.swift */,
 				BB662F2720EF912200D91B61 /* Authorization */,
-				BB662F3120EF912200D91B61 /* QQ */,
 				BB662F2A20EF912200D91B61 /* Share */,
-				BB662F2D20EF912200D91B61 /* SinaWeibo */,
-				BB662F2320EF912200D91B61 /* WeChat */,
+				3DD1382621991A8D00E609B9 /* Pay */,
+				3D131F6E2282BA2700F90C04 /* Platform */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -230,6 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				BB662ED820EF905500D91B61 /* OpenWithPayKit.h */,
+				3DD1382D21991C7D00E609B9 /* OpenManager+HandleOpen.swift */,
+				3D5321CC2199096B001D9C4E /* Alipay */,
 				BB662F0720EF90E900D91B61 /* QQ */,
 				BB662F1020EF90EA00D91B61 /* WeChat */,
 				BB662F0A20EF90EA00D91B61 /* SinaWeibo */,
@@ -243,10 +318,11 @@
 			isa = PBXGroup;
 			children = (
 				BB662EE520EF906E00D91B61 /* OpenWithoutPayKit.h */,
+				3DD1382B21991C5E00E609B9 /* OpenManager+HandleOpen.swift */,
 				BB662EEB20EF90E200D91B61 /* QQ */,
 				BB662EF420EF90E300D91B61 /* WeChat */,
 				BB662EEE20EF90E200D91B61 /* SinaWeibo */,
-				BB662EFA20EF90E300D91B61 /* SupportSetting */,
+				3D131F6722828B4700F90C04 /* SupportSetting */,
 				BB662EE620EF906E00D91B61 /* Info.plist */,
 			);
 			path = OpenWithoutPayKit;
@@ -306,15 +382,6 @@
 			path = SDK;
 			sourceTree = "<group>";
 		};
-		BB662EFA20EF90E300D91B61 /* SupportSetting */ = {
-			isa = PBXGroup;
-			children = (
-				BB662EFB20EF90E300D91B61 /* module.modulemap */,
-				BB662EFC20EF90E300D91B61 /* OtherKit.h */,
-			);
-			path = SupportSetting;
-			sourceTree = "<group>";
-		};
 		BB662F0720EF90E900D91B61 /* QQ */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,10 +428,10 @@
 		BB662F1120EF90EA00D91B61 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				BB662F1220EF90EA00D91B61 /* libWeChatSDK.a */,
-				BB662F1320EF90EA00D91B61 /* WechatAuthSDK.h */,
-				BB662F1420EF90EA00D91B61 /* WXApi.h */,
-				BB662F1520EF90EA00D91B61 /* WXApiObject.h */,
+				3D131F7F2282C53F00F90C04 /* libWeChatSDK.a */,
+				3D131F802282C54000F90C04 /* WechatAuthSDK.h */,
+				3D131F7E2282C53F00F90C04 /* WXApi.h */,
+				3D131F812282C54000F90C04 /* WXApiObject.h */,
 			);
 			path = SDK;
 			sourceTree = "<group>";
@@ -373,7 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				BB662F1720EF90EA00D91B61 /* module.modulemap */,
-				BB662F1820EF90EA00D91B61 /* OtherKit.h */,
+				BB662F1820EF90EA00D91B61 /* OtherWithPayKit.h */,
 			);
 			path = SupportSetting;
 			sourceTree = "<group>";
@@ -384,6 +451,7 @@
 				BB662F2420EF912200D91B61 /* WeChatManager.swift */,
 				BB662F2520EF912200D91B61 /* WeChatShareItem.swift */,
 				BB662F2620EF912200D91B61 /* WeChatUserItem.swift */,
+				3D131F6F2282BA5900F90C04 /* WeChatPayItem.swift */,
 			);
 			path = WeChat;
 			sourceTree = "<group>";
@@ -454,12 +522,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB662EDA20EF905500D91B61 /* OpenWithPayKit.h in Headers */,
-				BB662F2120EF90EB00D91B61 /* WXApiObject.h in Headers */,
-				BB662F1F20EF90EB00D91B61 /* WechatAuthSDK.h in Headers */,
 				BB662F1D20EF90EB00D91B61 /* WeiboSDK.h in Headers */,
 				BB662F1B20EF90EB00D91B61 /* WBHttpRequest.h in Headers */,
-				BB662F2020EF90EB00D91B61 /* WXApi.h in Headers */,
-				BB662F2220EF90EB00D91B61 /* OtherKit.h in Headers */,
+				BB662F2220EF90EB00D91B61 /* OtherWithPayKit.h in Headers */,
+				3D131F852282C54000F90C04 /* WXApiObject.h in Headers */,
+				3D131F822282C54000F90C04 /* WXApi.h in Headers */,
+				3D131F842282C54000F90C04 /* WechatAuthSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +541,7 @@
 				BB662F0120EF90E300D91B61 /* WeiboSDK.h in Headers */,
 				BB662EFF20EF90E300D91B61 /* WBHttpRequest.h in Headers */,
 				BB662F0420EF90E300D91B61 /* WXApi.h in Headers */,
-				BB662F0620EF90E300D91B61 /* OtherKit.h in Headers */,
+				3D131F6A22828B5D00F90C04 /* OtherWithoutPayKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,10 +595,11 @@
 				TargetAttributes = {
 					BB662ED520EF905500D91B61 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1020;
 					};
 					BB662EE220EF906E00D91B61 = {
 						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -540,6 +609,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = BB662EBC20EF901E00D91B61;
 			productRefGroup = BB662EC720EF901E00D91B61 /* Products */;
@@ -557,6 +627,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5321D021990991001D9C4E /* AlipaySDK.bundle in Resources */,
 				BB662F1C20EF90EB00D91B61 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,15 +651,21 @@
 				BB662F3B20EF912200D91B61 /* OpenAuthorizationItem.swift in Sources */,
 				BB662F4720EF912200D91B61 /* SinaWeiboUserItem.swift in Sources */,
 				BB662F4520EF912200D91B61 /* SinaWeiboShareItem.swift in Sources */,
+				3DD1382A21991B1500E609B9 /* OpenPayItem.swift in Sources */,
 				BB662F4B20EF912200D91B61 /* QQShareItem.swift in Sources */,
 				BB662F3F20EF912200D91B61 /* OpenManager+Share.swift in Sources */,
 				BB662F3920EF912200D91B61 /* WeChatUserItem.swift in Sources */,
 				BB662F4120EF912200D91B61 /* OpenShareItem.swift in Sources */,
 				BB662F3720EF912200D91B61 /* WeChatShareItem.swift in Sources */,
+				3DD1382521990BBA00E609B9 /* AlipayManager.swift in Sources */,
+				3D131F702282BA5900F90C04 /* WeChatPayItem.swift in Sources */,
 				BB662F4D20EF912200D91B61 /* QQUserItem.swift in Sources */,
 				BB662F4320EF912200D91B61 /* SinaWeiboManager.swift in Sources */,
 				BB662F3520EF912200D91B61 /* WeChatManager.swift in Sources */,
+				3DD1382821991ACD00E609B9 /* OpenManager+Pay.swift in Sources */,
+				3DD1382321990B9800E609B9 /* AlipayPayItem.swift in Sources */,
 				BB662F3D20EF912200D91B61 /* OpenManager+Authorization.swift in Sources */,
+				3DD1382E21991C7D00E609B9 /* OpenManager+HandleOpen.swift in Sources */,
 				BB662F7820EF932700D91B61 /* OpenManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +678,7 @@
 				BB662F3C20EF912200D91B61 /* OpenAuthorizationItem.swift in Sources */,
 				BB662F4820EF912200D91B61 /* SinaWeiboUserItem.swift in Sources */,
 				BB662F4620EF912200D91B61 /* SinaWeiboShareItem.swift in Sources */,
+				3DD1382C21991C5E00E609B9 /* OpenManager+HandleOpen.swift in Sources */,
 				BB662F4C20EF912200D91B61 /* QQShareItem.swift in Sources */,
 				BB662F4020EF912200D91B61 /* OpenManager+Share.swift in Sources */,
 				BB662F3A20EF912200D91B61 /* WeChatUserItem.swift in Sources */,
@@ -749,6 +827,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenWithPayKit/QQ/SDK",
+					"$(PROJECT_DIR)/OpenWithPayKit/Alipay/SDK",
 				);
 				INFOPLIST_FILE = OpenWithPayKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -767,7 +846,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/OpenWithPayKit/SupportSetting/";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -784,6 +863,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenWithPayKit/QQ/SDK",
+					"$(PROJECT_DIR)/OpenWithPayKit/Alipay/SDK",
 				);
 				INFOPLIST_FILE = OpenWithPayKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -802,7 +882,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/OpenWithPayKit/SupportSetting/";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -838,7 +918,7 @@
 				SECTORDER_FLAGS = "-ObjC";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/OpenWithoutPayKit/SupportSetting/";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -874,7 +954,7 @@
 				SECTORDER_FLAGS = "-ObjC";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/OpenWithoutPayKit/SupportSetting/";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -20,7 +20,7 @@ public extension OpenManager {
   /// - Parameters:
   ///   - appID: 开放平台AppID
   ///   - appSecret: 开放平台AppSecret
-  public class func registerWeChatSDK(withAppID appID: String, appSecret: String) {
+  class func registerWeChatSDK(withAppID appID: String, appSecret: String) {
     
     WeChatManager.register(appID, appSecret)
   }
@@ -31,7 +31,7 @@ public extension OpenManager {
   ///   - appID: 开放平台AppID
   ///   - appKey: 开放平台AppKey
   ///   - redirectURI: 开放平台回调地址
-  public class func registerSinaWeiboSDK(withAppID appID: String, appKey: String, redirectURI: String) {
+  class func registerSinaWeiboSDK(withAppID appID: String, appKey: String, redirectURI: String) {
     
     SinaWeiboManager.register(appID, appKey, redirectURI)
   }
@@ -41,23 +41,9 @@ public extension OpenManager {
   /// - Parameters:
   ///   - appID: 开放平台AppID
   ///   - appSecret: 开放平台AppSecret
-  public class func registerQQSDK(withAppID appID: String, appSecret: String) {
+  class func registerQQSDK(withAppID appID: String, appSecret: String) {
     
     QQManager.register(appID, appSecret)
-  }
-  
-}
-
-// MARK: - HandleOpen
-public extension OpenManager {
-  
-  /// 开放平台唤起应用时回调
-  ///
-  /// - Parameter url: 回调地址
-  /// - Returns: 是否可以回调
-  public class func handleOpen(_ url: URL) -> Bool {
-
-    return WeChatManager.handleOpen(url) || SinaWeiboManager.handleOpen(url) || QQManager.handleOpen(url)
   }
   
 }
@@ -78,11 +64,3 @@ public extension OpenManager {
   }
   
 }
-
-
-
-
-
-
-
-
