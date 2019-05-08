@@ -26,11 +26,11 @@ enum  WXErrCode {
  *
  */
 enum WXScene {
-    WXSceneSession  = 0,        /**< 聊天界面    */
-    WXSceneTimeline = 1,        /**< 朋友圈      */
-    WXSceneFavorite = 2,        /**< 收藏       */
+    WXSceneSession          = 0,   /**< 聊天界面    */
+    WXSceneTimeline         = 1,   /**< 朋友圈     */
+    WXSceneFavorite         = 2,   /**< 收藏       */
+    WXSceneSpecifiedSession = 3,   /**< 指定联系人  */
 };
-
 
 
 enum WXAPISupport {
@@ -199,7 +199,8 @@ typedef void(^WXLogBolock)(NSString * log);
  * @see WXScene
  */
 @property (nonatomic, assign) int scene;
-
+/** 指定发送消息的人，WXSceneSpecifiedSession时有效 */
+@property (nonatomic, retain) NSString* toUserOpenId;
 @end
 
 
@@ -334,6 +335,45 @@ typedef void(^WXLogBolock)(NSString * log);
 @interface OpenWebviewResp : BaseResp
 
 @end
+
+
+#pragma mark - WXOpenBusinessWebViewReq
+/*! @brief 第三方通知微信启动内部浏览器，打开指定业务的网页
+ *
+ *
+ */
+@interface WXOpenBusinessWebViewReq : BaseReq
+
+/** 网页业务类型
+ * @attention
+ */
+@property (nonatomic, assign) UInt32 businessType;
+
+/** 网页业务参数
+ * @attention
+ */
+@property (nonatomic, retain) NSDictionary *queryInfoDic;
+
+@end
+
+#pragma mark - WXOpenBusinessWebViewResp
+/*! @brief 微信终端向第三方程序返回的WXOpenBusinessWebViewResp处理结果。
+ *
+ * 第三方程序向微信终端发送WXOpenBusinessWebViewReq后，微信发送回来的处理结果，该结果用WXOpenBusinessWebViewResp表示。
+ */
+@interface WXOpenBusinessWebViewResp : BaseResp
+/** 第三方程序自定义简单数据，微信终端会回传给第三方程序处理
+ * @attention 长度不能超过2k
+ */
+@property (nonatomic, retain) NSString *result;
+
+/** 网页业务类型
+ * @attention
+ */
+@property (nonatomic, assign) UInt32 businessType;
+
+@end
+
 
 #pragma mark - OpenRankListReq
 /* ! @brief 第三方通知微信，打开硬件排行榜
@@ -537,6 +577,66 @@ typedef void(^WXLogBolock)(NSString * log);
 @property (nonatomic, strong) NSString *action;
 @property (nonatomic, strong) NSString * reserved;
 @property (nonatomic, strong) NSString * openId;
+
+@end
+
+#pragma mark - WXSubscribeMiniProgramMsg
+/** ! @brief 微信返回第三方请求选择发票结果
+ *
+ */
+@interface WXSubscribeMiniProgramMsgReq : BaseReq
+@property (nonatomic, strong) NSString * miniProgramAppid;
+@end
+
+#pragma mark - WXSubscriptionReq
+@interface WXSubscribeMiniProgramMsgResp : BaseResp
+
+@property(nonatomic, strong) NSString *openId;   // 小程序openid
+@property(nonatomic, strong) NSString *unionId;  // unionId
+@property(nonatomic, strong) NSString *nickName; // 用户昵称
+
+@end
+
+#pragma mark - WXinvoiceAuthInsertReq
+@interface WXInvoiceAuthInsertReq : BaseReq
+
+@property (nonatomic, strong) NSString *urlString;
+
+@end
+
+#pragma mark - WXinvoiceAuthInsertResp
+
+@interface WXInvoiceAuthInsertResp : BaseResp
+
+@property (nonatomic, strong) NSString * wxOrderId;
+
+@end
+
+#pragma mark - WXNontaxPayReq
+@interface WXNontaxPayReq:BaseReq
+
+@property (nonatomic, strong) NSString *urlString;
+
+@end
+
+#pragma mark - WXNontaxPayResp
+@interface WXNontaxPayResp : BaseResp
+
+@property (nonatomic, strong) NSString *wxOrderId;
+
+@end
+
+#pragma mark - WXPayInsuranceReq
+@interface WXPayInsuranceReq : BaseReq
+
+@property (nonatomic, strong) NSString *urlString;
+
+@end
+
+#pragma mark - WXPayInsuranceResp
+@interface WXPayInsuranceResp : BaseResp
+
+@property (nonatomic, strong) NSString *wxOrderId;
 
 @end
 
@@ -836,6 +936,7 @@ typedef void(^WXLogBolock)(NSString * log);
 @property (nonatomic, strong) NSString *path;       //拉起小程序页面的路径，不填默认拉起小程序首页
 @property (nonatomic, assign) WXMiniProgramType miniProgramType; //拉起小程序的类型
 
+@property (nonatomic, strong) NSString *extMsg; //json格式
 @end
 
 #pragma mark - WXLaunchMiniProgramResp
